@@ -70,12 +70,6 @@
         </header>
     
         <main role="main">
-    
-          <section class="jumbotron text-center">
-            <div class="container">
-            </div>
-          </section>
-    
           <div class="album py-5 bg-light" >
             <div class="container">
     

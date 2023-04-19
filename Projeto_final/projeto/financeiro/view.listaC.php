@@ -3,13 +3,13 @@
     if(!empty($_GET['search'])){
       $data = $_GET['search'];
   
-      $sql = "SELECT * FROM formulario.cliente WHERE id LIKE '%$data%' or id_cliente LIKE '%$data%' or razao_social LIKE '%$data%' ORDER BY id DESC";
+      $get = "SELECT * FROM formulario.cliente WHERE id LIKE '%$data%' or id_cliente LIKE '%$data%' or razao_social LIKE '%$data%' ORDER BY id DESC";
   
     }else{
-      $sql = "SELECT * FROM formulario.cliente ORDER BY id DESC";
+      $get = "SELECT * FROM formulario.cliente ORDER BY id DESC";
       
     }
-    $result = $conexao->query($sql);
+    $result = $conexao->query($get);
     
 ?>
 <!DOCTYPE HTML>

@@ -3,13 +3,13 @@
     if(!empty($_GET['search'])){
       $data = $_GET['search'];
   
-      $sql = "SELECT * FROM formulario.cliente WHERE id LIKE '%$data%' or id_cliente LIKE '%$data%' or razao_social LIKE '%$data%' ORDER BY id DESC";
+      $get = "SELECT * FROM formulario.cliente WHERE id LIKE '%$data%' or id_cliente LIKE '%$data%' or razao_social LIKE '%$data%' ORDER BY id DESC";
   
     }else{
-      $sql = "SELECT * FROM formulario.cliente ORDER BY id DESC";
+      $get = "SELECT * FROM formulario.cliente ORDER BY id DESC";
       
     }
-    $result = $conexao->query($sql);
+    $result = $conexao->query($get);
     
 ?>
 <!DOCTYPE HTML>
@@ -34,22 +34,25 @@
     height: 55px;
   }
 </style>
-<body>
-    <header class="site-header sticky-top py-1">
-        <nav class="container d-flex flex-column flex-md-row justify-content-between">
-          <a class="py-2" href="view.adm.php" aria-label="Product">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
-          </a>
-          <a class="btn btn-secondary" href="view.listaC.adm.php">Clientes</a>
-          <a class="btn btn-secondary" href="view.listaF.adm.php">Fornecedores</a>
-          <a class="btn btn-secondary" href="view.listaP.adm.php">Funcionários</a>
-          <a class="btn btn-secondary" href="view.adm.php">Voltar</a>
+<header class="site-header sticky-top py-1 bg-dark text-white ">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between bg-dark">
+         <a style="color:white;" class="py-2" href="view.adm.php" aria-label="Product">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>tela inicial</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+          
+        </a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.listaC.adm.php">Clientes</a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.listaF.adm.php">Fornecedores</a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.listaP.adm.php">Funcionários</a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.adm.php">Voltar</a>
         </nav>
       </header>
+
+<body>
+   
       <div class="box-search">
           <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">
           <button class="btn btn-primary bt-sm" onclick="searchData()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark" class="bi bi-search" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
           </svg>
           </button>

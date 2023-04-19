@@ -37,20 +37,21 @@
             text-align: center;
         }
     </style>
-    <body>
-    <header class="site-header sticky-top py-1">
-        <nav class="container d-flex flex-column flex-md-row justify-content-between">
-          <a class="py-2" href="view.diretor.php" aria-label="Product">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
-          </a>
-          <a class="btn btn-secondary"href="view.listaC.php">Clientes</a>
-          <a class="btn btn-secondary" href="view.listaF.php">Fornecedores</a>
-          <a class="btn btn-secondary" href="index.php">Dashboard</a>
-          <a class="btn btn-secondary" href="relatorio_os.php">Relatório de OS</a>
-          <a class="btn btn-secondary" href="view.diretor.php">Voltar</a>
+    <header class="site-header sticky-top py-1 bg-dark text-white ">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between bg-dark">
+         <a style="color:white;" class="py-2" href="view.diretor.php" aria-label="Product">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>tela inicial</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+          
+        </a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.listaC.php">Clientes</a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.listaF.php">Fornecedores</a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="index.php">Dashboard</a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="relatorio_os.php">Relatórios</a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.diretor.php">Voltar</a>
         </nav>
       </header>
-      <br>
+
+    <body>
       <table class="table table-bordered table-hover">
         <thead>
           <tr>

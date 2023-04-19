@@ -20,8 +20,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
-<body>
-        <header>
+
+<header>
           <div class="collapse bg-dark" id="navbarHeader">
             <div class="container">
               <div class="row">
@@ -35,7 +35,7 @@
           <div class="navbar navbar-dark bg-dark box-shadow">
             <div class="container d-flex justify-content-between">
               <a href="#" class="navbar-brand d-flex align-items-center">
-                <strong><?php echo 'Olá, '. $_SESSION['adm'];?></strong>
+                <strong><?php echo 'Olá, '. $_SESSION['adm']?></strong>
               </a>
               <style>
                   .btnLog{
@@ -63,6 +63,9 @@
             </div>
             
           </div>
+
+<body>
+        
         </header>
         
         <main role="main">

@@ -1,8 +1,8 @@
 <?php
     include_once('config.php');
 
-    $sql = "SELECT * FROM formulario.funcionario ORDER BY id DESC";
-    $result = $conexao->query($sql);
+    $get = "SELECT * FROM formulario.funcionario ORDER BY id DESC";
+    $result = $conexao->query($get);
     
 ?>
 <!DOCTYPE HTML>
@@ -18,20 +18,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
-<body>
-  
-    <header class="site-header sticky-top py-1">
-        <nav class="container d-flex flex-column flex-md-row justify-content-between">
-          <a class="py-2" href="view.adm.php" aria-label="Product">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
-          </a>
-          <a class="btn btn-secondary" href="view.listaC.adm.php">Clientes</a>
-          <a class="btn btn-secondary" href="view.listaF.adm.php">Fornecedores</a>
-          <a class="btn btn-secondary" href="view.listaP.adm.php">Funcionários</a>
-          <a class="btn btn-secondary" href="view.adm.php">Voltar</a>
+<header class="site-header sticky-top py-1 bg-dark text-white ">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between bg-dark">
+         <a style="color:white;" class="py-2" href="view.adm.php" aria-label="Product">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>tela inicial</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+          
+        </a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.listaC.adm.php">Clientes</a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.listaF.adm.php">Fornecedores</a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.listaP.adm.php">Funcionários</a>
+          <a style="border: none" class="btn btn-secondary bg-dark" href="view.adm.php">Voltar</a>
         </nav>
       </header>
-  
+<body>
+ 
       <table class="table table-bordered table-hover" style="text-align: center;">
         <thead>
           <tr>
@@ -55,7 +55,7 @@
                     echo "<td>$user_data[funcao]</td>";
                     echo "<td>$user_data[cpf]</td>";
                     echo "<td>$user_data[email]</td>";
-                     echo "<td>$user_data[codigo_acesso]</td>";
+                    echo "<td>$user_data[codigo_acesso]</td>";
                     echo "<td>
                           <a class = 'btn btn-primary btn-sm' href='edit.funcionario.php?id=$user_data[id]'>
                               <svg xmlns='http://www.w3.org/2000/svg' width='16' height='12' fill='currentColor' class='bi bi-pencil-fill' viewBox='0 0 16 16'>

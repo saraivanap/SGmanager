@@ -4,11 +4,10 @@
       include_once('config.php');
 
       if(isset($_POST['email']) && isset($_POST['codigo_acesso'])){
-        
-        $email = $conexao->real_escape_string($_POST['email']);
+        $email = $conexao->real_escape_string($_POST['email']);     
         $cod_acesso = $conexao->real_escape_string($_POST['codigo_acesso']);
         
-        // $cod_acesso = $_POST['codigo_acesso'];
+        $cod_acesso = $_POST['codigo_acesso'];
         $get = "SELECT * FROM formulario.funcionario WHERE email = '$email' AND codigo_acesso = '$cod_acesso'";
         $result = $conexao->query($get);
 
@@ -69,7 +68,7 @@
 <!DOCTYPE html> 
 <html lang="pt">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF=8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SG manager</title>
@@ -79,30 +78,44 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
 <style>
-  #icon{
-    position: absolute;
-    top: 31%;
-    right: 65px;
-    transform: translate(-50%);
-    background: url('eye.svg');
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    background-size: cover;
-  } #icon.hide{
-    background: url('eye.svg');
-    background-size: cover;
+  
+  body {
+    width: 100%;
+    background-color: darkgray;
+  }
+
+  @media screen {
+      section, aside{
+          width: 100%;
+      }
+      nav form-floating mb-3 {
+          text-align: center;
+     }
+      nav h5 {
+        text-align: center;
+      }
+  }
+
+  @media screen and (max-width: 600px) {
+      nav form-floating mb-3 {
+          text-align: center;
+          border-top: 20%;
+      }
+
+      nav h5 {
+        text-align: center;
+        border-top: 20%;
+      }
   }
 
 </style>
-  <body>
-    
-    <div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin" >
+  <body>    
+    <div class="modal modal-signin position-static align-items-center d-block">
       <div class="modal-dialog" role="document" >
         <div class="modal-content rounded-4 shadow">
-          <div class="modal-header p-5 pb-4 border-bottom-0" >
-            <!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
-            <h5 class="fw-bold mb-0 fs-2 " style="margin-left: 100px; color: #3f445e;">Bem vindo de volta!</h5>
+          <div class="modal-header p-5 pb-4 border-bottom-5" >
+
+            <h5 class="fw-bold fs-2 " style="color: #3f445e; align=center" >LOGIN</h5>
             
           </div>
           <form action="view.login.php" method="POST">
@@ -116,7 +129,7 @@
               </div>
               <br><br>
               <input class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"  type="submit" name="submit" value="Entrar" style="border-radius: 40px;  border: none;"></input>
-            
+              
           </div>
         </div>
       </div>

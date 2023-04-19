@@ -6,9 +6,9 @@
 
         $id = $_GET['id'];
 
-        $sqlSelect = "SELECT * FROM formulario.ordem_de_servico  WHERE id=$id";
+        $get = "SELECT * FROM formulario.ordem_de_servico  WHERE id=$id";
 
-        $result = $conexao->query($sqlSelect);
+        $result = $conexao->query($get);
 
         if($result->num_rows > 0){
 
